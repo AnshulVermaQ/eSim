@@ -102,7 +102,8 @@ function installSky130Pdk
 
 }
 
-
+# It gives an error like " The kicad/kicad-6.0-releases does’nt 
+# have a Release file" the solution of this issue i have provided in report file
 function installKicad
 {
 
@@ -160,8 +161,10 @@ function installDependency
     echo "Installing Matplotlib......................"
     sudo apt-get install -y python3-matplotlib
 
+# This command gives an error "Package ‘python3-distutils’ has no 
+# installation candidate" to resolve that we need to change python3-distutils to python3-distutils-extra
     echo "Installing Distutils......................."
-    sudo apt-get install -y python3-distutils
+    sudo apt-get install -y python3-distutils-extra
 
     # Install NgVeri Depedencies
     echo "Installing Pip3............................"
